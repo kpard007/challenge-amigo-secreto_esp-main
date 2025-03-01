@@ -46,3 +46,23 @@ function mostrarLista(){
 
 }
 
+//parte #3
+function sortearAmigo(){
+    let indiceRandom;
+    if (amigos.length === 0){
+        alert('No hay nombres a sortear');
+    //retornamos al no haber nombres en el arreglo para abortar la ejecucion
+        return; 
+    }
+    //asignamos el valor de un indice aleatorio a la variable indiceRandom
+    indiceRandom = Math.floor(Math.random()*amigos.length);
+    let nombreSorteado = amigos[indiceRandom];
+
+    //almacenamos el resultado en el html
+    let resultado = document.getElementById('resultado');
+
+    //mostramos el resultado en el html 
+    resultado.innerHTML = (`<li> ${nombreSorteado} </li>`);
+    
+}
+
